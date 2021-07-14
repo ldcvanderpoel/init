@@ -3,7 +3,7 @@
 ### VARIABLES
 
 base='zsh vim tmux htop wget'
-useful='dnsutils ssh ncdu rsync ripgrep fd-find ranger fzf tldr lshw zathura feh'
+useful='dnsutils ssh ncdu rsync ripgrep fd-find ranger fzf tldr lshw zathura feh autojump'
 python='python3 python3-pip python3-is-python'
 heavy='steam spotify wine virtualbox virtualbox—ext–pack'
 cybsec='nmap'
@@ -16,6 +16,14 @@ install_sublime () {
   echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sources.list.d/sublime-text.list
   apt update
   apt install -y sublime-text
+}
+
+install_ohmyzsh () {
+# Install oh-my-zsh plus extras
+  sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+  git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+  git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+  git clone https://github.com/supercrabtree/k $ZSH_CUSTOM/plugins/k
 }
 
 install_base () {
