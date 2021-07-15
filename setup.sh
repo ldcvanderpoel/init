@@ -40,7 +40,9 @@ install_useful () {
     echo "Installing useful packages (includes base)."
     sudo apt install $base $useful
     
-    cargo exa sd bat dust ytop tealdeer zoxide grex
+    install_ohmyzsh
+    
+    cargo install exa sd bat dust ytop tealdeer zoxide grex
     tldr --update
     
     # Setup fd symlink
