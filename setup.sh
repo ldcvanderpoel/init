@@ -37,6 +37,16 @@ install_python () {
     sudo apt install $python
 }
 
+install_alacritty () {
+    sudo snap install alacritty --classic
+    # Get fonts
+    FONTDIR=$HOME/.local/share/fonts
+    mkdir -p $FONTDIR
+    curl --output-dir $FONTDIR -fLo "mononoki Regular Nerd Font Complete.ttf" https://github.com/ryanoasis/nerd-fonts/blob/master/patched-fonts/Mononoki/Regular/complete/mononoki-Regular%20Nerd%20Font%20Complete.ttf
+    curl --output-dir $FONTDIR -fLo "mononoki Italic Nerd Font Complete.ttf" https://github.com/ryanoasis/nerd-fonts/blob/master/patched-fonts/Mononoki/Italic/complete/mononoki%20Italic%20Nerd%20Font%20Complete.ttf
+    curl --output-dir $FONTDIR -fLo "mononoki Bold Nerd Font Complete.ttf" https://github.com/ryanoasis/nerd-fonts/blob/master/patched-fonts/Mononoki/Bold/complete/mononoki%20Bold%20Nerd%20Font%20Complete.ttf
+}
+
 install_useful () {
     echo "Installing useful packages (includes base)."
     sudo apt install $base $useful
@@ -91,6 +101,7 @@ do
 	u) install_useful;;
 	h) install_heavy;;
 	s) install_sublime;;
+	y) install_alacritty;;
     esac
 done
 
