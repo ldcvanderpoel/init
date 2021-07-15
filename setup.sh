@@ -3,7 +3,7 @@
 ### VARIABLES
 
 base='zsh vim tmux htop wget'
-useful='dnsutils ssh ncdu rsync ripgrep fd-find ranger fzf tldr lshw zathura feh autojump'
+useful='dnsutils ssh ncdu rsync ripgrep fd-find ranger fzf lshw zathura feh cargo'
 python='python3 python3-pip python3-is-python'
 heavy='steam spotify wine virtualbox virtualbox—ext–pack'
 cybsec='nmap'
@@ -39,6 +39,9 @@ install_python () {
 install_useful () {
     echo "Installing useful packages (includes base)."
     sudo apt install $base $useful
+    
+    cargo exa sd bat dust ytop tealdeer zoxide grex
+    tldr --update
     
     # Setup fd symlink
     ln -s $(which fdfind) ~/.local/bin/fd
