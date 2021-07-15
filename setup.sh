@@ -42,7 +42,7 @@ install_useful () {
     
     install_ohmyzsh
     
-    cargo install exa sd bat dust ytop tealdeer zoxide grex
+    cargo install exa sd bat du-dust ytop tealdeer zoxide grex
     tldr --update
     
     # Setup fd symlink
