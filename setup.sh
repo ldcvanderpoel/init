@@ -27,6 +27,18 @@ install_ohmyzsh () {
   git clone https://github.com/supercrabtree/k $ZSH_CUSTOM/plugins/k
 }
 
+install_rust () {
+# Install Rust and additional tools
+# The apt package of cargo is typically too outdated for debian systems.
+# Therefore, use rustup.
+
+    # Install rustup
+    curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+    rustup update
+    cargo install exa sd bat du-dust ytop tealdeer zoxide grex
+    tldr --update
+}
+
 install_base () {
     echo "Installing base packages."
     sudo apt install $base
@@ -52,9 +64,9 @@ install_useful () {
     sudo apt install $base $useful
     
     install_ohmyzsh
+    install_rust
     
-    cargo install exa sd bat du-dust ytop tealdeer zoxide grex
-    tldr --update
+
     
     # Setup fd symlink
     ln -s $(which fdfind) ~/.local/bin/fd
