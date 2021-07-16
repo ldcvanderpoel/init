@@ -2,7 +2,7 @@
 
 ### VARIABLES
 
-base='zsh vim tmux htop wget'
+base='zsh vim tmux htop wget net-tools'
 useful='dnsutils ssh ncdu rsync ripgrep fd-find ranger fzf lshw zathura feh cargo'
 python='python3 python3-pip python3-is-python'
 heavy='steam spotify wine virtualbox virtualbox—ext–pack'
