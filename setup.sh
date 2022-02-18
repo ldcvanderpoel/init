@@ -35,7 +35,7 @@ install_rust () {
     # Install rustup
     curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
     rustup update
-    cargo install exa sd bat du-dust ytop tealdeer zoxide grex
+    cargo install exa sd bat du-dust ytop tealdeer zoxide grex vivid
     tldr --update
 }
 
