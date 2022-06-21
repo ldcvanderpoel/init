@@ -2,9 +2,11 @@
 
 ### VARIABLES
 
-base='zsh vim tmux htop wget net-tools'
-useful='dnsutils ssh ncdu rsync ripgrep fd-find ranger fzf lshw zathura feh vim-gtk'
-python='python3 python3-pip python3-is-python'
+all='zsh vim tmux htop wget net-tools neovim dnsutils ssh ncdu rsync ripgrep fd-find ranger keychain fzf lshw zathura \
+feh xmlstarlet sshpass evil-winrm nbtscan neo4j xlsx2csv kerberoast crackmapexec joomscan sshuttle unar rename seclists \
+curl enum4linux feroxbuster gobuster impacket-scripts nbtscan nmap onesixtyone oscanner redis-tools smbclient smbmap \
+snmp sslscan sipvicious tnscmd10g whatweb wkhtmltopdf npm yarn empire dirsearch jq httprobe'
+python='black mssql-cli setuptools wheel urlextract kerbrute pipx pandas numpy updog neovim ldaptor mitmproxy 2to3 droopescan s3recon ds_store scoutsuite neo4j'
 heavy='steam spotify wine virtualbox virtualbox—ext–pack'
 cybsec='nmap'
 
